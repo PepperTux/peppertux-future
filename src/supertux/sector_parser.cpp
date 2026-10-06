@@ -46,9 +46,9 @@
 
 namespace
 {
-  static const std::string DEFAULT_BG = "images/background/antarctic/snow_hills.png";
+  static const std::string DEFAULT_BG = "images/background/misc/transparent_up.png";
   static const std::string DEFAULT_BG_TOP = "images/background/misc/transparent_up.png";
-  static const std::string DEFAULT_BG_BOTTOM = "images/background/antarctic/snow_bottom.png";
+  static const std::string DEFAULT_BG_BOTTOM = "images/background/misc/transparent_up.png";
 }
 
 std::unique_ptr<Sector>
@@ -262,7 +262,7 @@ SectorParser::parse_old_format(const ReaderMapping& reader)
   m_sector.add<SpawnPointMarker>(DEFAULT_SPAWNPOINT_NAME, startpos);
 
   auto& music = m_sector.add<MusicObject>();
-  music.set_music("/music/antarctic/midday.music");
+  music.set_music("/music/antarctic/chipdisko.music");
 
   int width = 30, height = 15;
   reader.get("width", width);
@@ -354,13 +354,6 @@ SectorParser::create_sector()
     background.set_speed(0.3);
     background.set_name("Snowy_Hills");
 
-    auto& panorama = m_sector.add<Background>();
-    panorama.set_image("images/background/antarctic/snow_panorama.png");
-    panorama.set_images(DEFAULT_BG_TOP, "images/background/antarctic/snow_panorama.png", "images/background/misc/water_bottom.png");
-    panorama.set_speed(0.0);
-    panorama.set_layer(-350);
-    panorama.set_name("Panorama");
-
     auto& midground_tilemap = m_sector.add<TileMap>(m_sector.get_tileset());
     midground_tilemap.resize(Sector::DEFAULT_SECTOR_WIDTH, Sector::DEFAULT_SECTOR_HEIGHT);
     midground_tilemap.set_layer(-100);
@@ -406,7 +399,7 @@ SectorParser::create_sector()
 
     m_sector.add<SpawnPointMarker>(DEFAULT_SPAWNPOINT_NAME, Vector(64, 480));
 
-    music.set_music("/music/antarctic/midday.music");
+    music.set_music("/music/antarctic/chipdisko.music");
   }
 
   m_sector.add<Camera>("Camera");
