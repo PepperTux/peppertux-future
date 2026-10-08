@@ -5,13 +5,13 @@
   (worldmap #f)
   (object
     (class "snowball")
-    (icon "images/creatures/snowball/snow/snowball-1.png"))
+    (icon "images/creatures/snowball/snowball-1.png"))
   (object
     (class "smartball")
-    (icon "images/creatures/snowball/smart/smartball-1.png"))
+    (icon "images/creatures/snowball/smartball-1.png"))
   (object
     (class "captainsnowball")
-    (icon "images/creatures/snowball/captain/captain-left-1.png"))
+    (icon "images/creatures/snowball/captain-left-1.png"))
   (object
     (class "bouncingsnowball")
     (icon "images/creatures/bouncing_snowball/bs4.png"))
@@ -20,7 +20,7 @@
     (icon "images/creatures/flying_snowball/fs1.png"))
   (object
     (class "kamikazesnowball")
-    (icon "images/creatures/snowball/kamikaze/kamikaze-snowball-editor.png"))
+    (icon "images/creatures/snowball/kamikaze-snowball-editor.png"))
   (object
     (class "snowman")
     (icon "images/creatures/snowman/smwalk5.png"))
